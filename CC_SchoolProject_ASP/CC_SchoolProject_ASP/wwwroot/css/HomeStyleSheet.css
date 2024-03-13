@@ -1,0 +1,56 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: darkgreen; 
+}
+
+#logo {
+    float: left;
+    margin-right:10px;
+}
+
+
+
+#schoolName {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#mainContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#leftContent {
+    flex: 1;
+    max-width: 70%;
+}
+
+#rightContent {
+    flex: 1;
+    max-width: 25%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#loginButton, #registerButton{margin-bottom:10px;}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: darkgreen; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+
+}

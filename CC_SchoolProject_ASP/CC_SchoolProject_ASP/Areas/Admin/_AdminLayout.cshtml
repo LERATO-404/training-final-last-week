@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ParkHurst High School</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/adminStyleSheet.css" asp-append-version="true" />
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-secondary border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a href="~/Admin/AdminTeach/Index" class="logo">
+                    <img src="~/images/MicrosoftTeams-image (17).png" alt="School Management" width="75px" height="40px" asp-append-version="true">
+                </a>
+
+                <div>
+                <a class="navbar-brand text-center" style="color: black; font-weight: bold;">ParkHurst High School Management System</a>
+
+                <span class="navspacer">&nbsp;&nbsp;</span>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="~/UserAccess/UserManager/Logout" class="nav-link text-white">Logout</a>
+            </div>
+
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="admin-main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="bg-secondary text-black-50 py-3 text-center fw-bold">
+        &copy; 2023 - ParkHurst High School - CodeCrusaders
+        <br />
+        <br />
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

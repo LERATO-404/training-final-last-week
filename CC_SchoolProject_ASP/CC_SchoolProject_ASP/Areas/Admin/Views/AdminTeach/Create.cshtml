@@ -1,0 +1,106 @@
+﻿@model CC_SchoolProject_ASP.CCModels.Teacher
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/_AdminLayout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Teacher</h4>
+<hr />
+<div class="text-center">
+    <h4>Create A New Teacher</h4>
+</div>
+
+<hr />
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <form asp-area="Admin" asp-controller="AdminTeach" asp-action="Create" method="post">
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.FirstName)&nbsp;</div>
+                    </div>
+                    <input type="text" asp-for="FirstName" class="form-control" id="FirstName" name="FirstName" placeholder="FirstName" required>
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.LastName)&nbsp;</div>
+                    </div>
+                    <input type="text" asp-for="LastName" class="form-control" id="LastName" name="LastName" placeholder="LastName" required>
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.StartDate)&nbsp;</div>
+                    </div>
+                    <input type="date" asp-for="StartDate" class="form-control" id="StartDate" name="StartDate" placeholder="StartDate" required>
+                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.DateOfBirth)&nbsp;</div>
+                    </div>
+                    <input type="date" asp-for="DateOfBirth" class="form-control" id="DateOfBirth" name="DateOfBirth" placeholder="DateOfBirth" required>
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.ContactNumber)&nbsp;</div>
+                    </div>
+                    <input type="text" asp-for="ContactNumber" class="form-control" id="ContactNumber" name="ContactNumber" placeholder="Contact Number" required>
+                    <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.EmailAddress)&nbsp;</div>
+                    </div>
+                    <input type="text" asp-for="EmailAddress" class="form-control" id="EmailAddress" name="EmailAddress" placeholder="Email Address" required>
+                    <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                </div>
+            </div>
+
+            
+            <div class="form-group">
+                <br />
+                <div class="text-center">
+                    <input type="submit" value="Submit" class="btn btn-secondary" />
+                </div>
+                <br />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <div class="col text-end">
+        <br />
+        <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Action("Details", "AdminTeach")'">Go Back</button>
+        <br />
+        <br />
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

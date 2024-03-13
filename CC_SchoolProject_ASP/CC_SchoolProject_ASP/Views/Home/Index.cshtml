@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null; 
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>  
+    <link rel="stylesheet" href="~/css/HomeStyleSheet.css" asp-append-version="true" />
+</head>
+<body>
+
+    <header>
+        <img id="logo" src="images/MicrosoftTeams-image (17).png" alt="Logo" width="50" height="50" />
+        <div id="schoolName">ParkHurst High School</div>
+    </header>
+
+    <div id="mainContent">
+        <div id="leftContent">
+            <img src="images/parkhurst.jpg" alt="Big Picture" style="max-width: 100%;" />
+            <br />
+        </div>
+        
+
+        <div id="rightContent">
+            <button onclick="location.href='UserAccess/UserManager/Login'">Login</button>
+            <br />
+            <button onclick="location.href='UserAccess/UserManager/Register'">
+                Register
+            </button>
+        </div>
+    </div>
+    <br />
+    
+       <footer class="bg-secondary text-black-50 py-3 text-center fw-bold">
+        &copy; 2023 - ParkHurst High School - CodeCrusaders
+        <br />
+        <br />
+    </footer>
+    
+
+</body>
+</html>
+
+

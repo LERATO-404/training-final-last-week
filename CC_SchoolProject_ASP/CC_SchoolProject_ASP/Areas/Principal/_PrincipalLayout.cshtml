@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FDM Academy</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/principalStyleSheet.css" asp-append-version="true" />
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-maroon border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a href="~/Principal/Principal/Index" class="logo">
+                    <img src="~/images/MicrosoftTeams-image (17).png" alt="School Management" width="75px" height="40px" asp-append-version="true">
+                </a>
+                <span class="navspacer">&nbsp;&nbsp;</span>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a href="~/Principal/Principal/Index" class="nav-link text-white">Home</a>
+                        </li>
+
+
+                    </ul>
+                    <ul class="navbar-nav">
+                        @if (TempData["FirstName"]?.ToString() != null)
+                        {
+                            TempData.Keep();
+                            <li class="nav-item">
+                                <a class="nav-link text-white">Hello @TempData["FirstName"]?.ToString() @TempData["LastName"]?.ToString()</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="~/UserAccess/UserManager/Logout" class="nav-link text-white">Logout</a>
+                            </li>
+                            TempData.Keep();
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="admin-main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="admin-footer">
+        &copy; 2023 - ParkHurst High School - CodeCrusaders
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

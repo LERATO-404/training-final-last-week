@@ -1,0 +1,50 @@
+﻿
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/_AdminLayout.cshtml";
+}
+
+<h1></h1>
+
+<div>
+
+    <h4>Welcome Principal!</h4>
+    <hr />
+
+
+    <div>
+        <div style="float: left;">
+        </div>
+        <div style="float: right;">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a href="/Account/Logout">Logout</a>
+            }
+            else
+            {
+                <a href="~/UserAccess/UserManager/Logout">Logout</a>
+            }
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <div>
+        <br />
+
+        <div style="text-align: center;">
+            <a href="/Principal/Principal/GetLearnerInfo">View Learners</a>
+        </div>
+        <br />
+
+        <div style="text-align: center;">
+            <a href="/Principal/Principal/GetTeacherSubjectInfo">View Teachers and Subject</a>
+        </div>
+        <br />
+
+        <div style="text-align: center;">
+            <a href="/Principal/Principal/GetLearnerAssessmentInfo">View Learner and Assessment</a>
+        </div>
+        <br />
+
+    </div>
+</div>

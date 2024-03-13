@@ -1,0 +1,11 @@
+﻿.bg-maroon {
+    background-color: maroon !important;
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+    margin-left: 40pt;
+    max-height: 40px;
+    margin-right: 20px;
+}

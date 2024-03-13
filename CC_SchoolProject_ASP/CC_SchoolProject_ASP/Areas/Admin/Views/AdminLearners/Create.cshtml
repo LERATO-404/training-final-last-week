@@ -1,0 +1,149 @@
+﻿@model CC_SchoolProject_ASP.Areas.Admin.Models.LearnerGuardianAddressVM
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/_AdminLayout.cshtml";
+}
+
+<div class="text-center">
+    <h4>Create A New Learner</h4>
+</div>
+
+<hr />
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <form asp-area="Admin" asp-controller="AdminLearners" asp-action="Create" method="post">
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.FirstName)&nbsp;</div>
+                    </div>
+                    <input type="text" asp-for="FirstName" class="form-control" id="FirstName" name="FirstName" placeholder="FirstName" required>
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.LastName)&nbsp;</div>
+                    </div>
+                    <input type="text" asp-for="LastName" class="form-control" id="LastName" name="LastName" placeholder="LastName" required>
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.StartDate)&nbsp;</div>
+                    </div>
+                    <input type="date" asp-for="StartDate" class="form-control" id="StartDate" name="StartDate" placeholder="StartDate" required>
+                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.DateOfBirth)&nbsp;</div>
+                    </div>
+                    <input type="date" asp-for="DateOfBirth" class="form-control" id="DateOfBirth" name="DateOfBirth" placeholder="DateOfBirth" required>
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.GuardianFirstName)&nbsp;</div>
+                    </div>
+                    <input type="text" asp-for="GuardianFirstName" class="form-control" id="GuardianFirstName" name="GuardianFirstName" placeholder="Guardian's First Name" required>
+                    <span asp-validation-for="GuardianFirstName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.GuardianLastName)&nbsp;</div>
+                    </div>
+                    <input type="text" asp-for="GuardianLastName" class="form-control" id="GuardianLastName" name="GuardianLastName" placeholder="Guardian's Last Name" required>
+                    <span asp-validation-for="GuardianLastName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.Relationship)&nbsp;</div>
+                    </div>
+                    <input type="text" asp-for="Relationship" class="form-control" id="Relationship" name="Relationship" placeholder="Relationship" required>
+                    <span asp-validation-for="Relationship" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.Contact)&nbsp;</div>
+                    </div>
+                    <input type="text" asp-for="Contact" class="form-control" id="Contact" name="Contact" placeholder="Contact" required>
+                    <span asp-validation-for="Contact" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.AddressLine)&nbsp;</div>
+                    </div>
+                    <input type="text" asp-for="AddressLine" class="form-control" id="AddressLine" name="AddressLine" placeholder="Address Line" required>
+                    <span asp-validation-for="AddressLine" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.Suburb)&nbsp;</div>
+                    </div>
+                    <input type="text" asp-for="Suburb" class="form-control" id="Suburb" name="Suburb" placeholder="Suburb" required>
+                    <span asp-validation-for="Suburb" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@Html.DisplayNameFor(model => model.PostalCode)&nbsp;</div>
+                    </div>
+                    <input type="text" asp-for="PostalCode" class="form-control" id="PostalCode" name="PostalCode" placeholder="PostalCode" required>
+                    <span asp-validation-for="PostalCode" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <br />
+                <div class="text-center">
+                    <input type="submit" value="Submit" class="btn btn-secondary" />
+                </div>
+                <br />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <div class="col text-end">
+        <br />
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Action("Details", "AdminLearners")'">Go Back</button>
+        <br />
+        <br />
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
